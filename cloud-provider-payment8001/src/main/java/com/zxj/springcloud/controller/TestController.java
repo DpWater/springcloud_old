@@ -23,6 +23,7 @@ public class TestController {
     @Value(value = "${eureka.instance.instance-id}")
     private String instanceId;
 
+
     @RequestMapping(value = "/testFunction")
      public CommonResult test(){
         List<HashMap<String, String>> test = testService.test();

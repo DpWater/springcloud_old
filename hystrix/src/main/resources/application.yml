@@ -1,0 +1,15 @@
+server:
+  port: 9080
+
+spring:
+  application:
+    name: CLOUD-HYSTRIX
+
+eureka:
+  client:
+    register-with-eureka: true
+    fetchRegistry: true
+    service-url:
+      defaultZone: http://localhost:7001/eureka
+  instance:
+    instance-id: CLOUD-HYSTRIX

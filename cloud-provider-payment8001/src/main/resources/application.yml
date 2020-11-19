@@ -1,0 +1,32 @@
+server:
+  port: 8001
+
+
+spring:
+  application:
+    name: cloud-payment-service
+  datasource:
+    type: com.alibaba.druid.pool.DruidDataSource
+    driver-class-name: org.gjt.mm.mysql.Driver
+    url: jdbc:mysql://localhost:3306/world?useUnicode=true&characterEncoding=utf-8&useSSL=false
+    username: root
+    password: root
+
+
+mybatis:
+  mapperLocations: classpath:mapper/*.xml
+  type-aliases-package: com.zxj.springcloud.mapper
+
+eureka:
+  client:
+    register-with-eureka: true
+    fetchRegistry: true
+    service-url:
+      defaultZone: http://localhost:7001/eureka,http://localhost:7002/eureka
+  instance:
+    instance-id: CLOUD-PROVIDER-HYSTRIX-PAYMENT
+
+
+
+
+
